@@ -1,0 +1,11 @@
+<div>
+    Tasks - User {{userid}} 
+    <input (click)="openAddTask()" type="button" value="Add"  style="float: right; background-color: lemonchiffon;">
+</div>
+
+<br>
+<div style="border-style: solid; border-color: darkgray" >
+
+    <app-todo [userid]="userid" [task]="task" *ngFor="let task of userTasks" ></app-todo>
+    
+</div>

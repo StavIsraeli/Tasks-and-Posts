@@ -1,0 +1,36 @@
+<div style=" border-style: solid; border-color: grey;border-radius: 25px" >
+     <br><br>
+    <div style=" border-style: solid; border-color: darkgray" >
+        <p>
+            <strong>New Todo - User {{userid}}</strong>
+        </p>
+        
+        
+    <div style="height:100%;">
+        <form #f="ngForm" (ngSubmit)="customSubmit(f.valid)">
+
+            
+            
+            <strong>Title : <input #title="ngModel" [(ngModel)]="newTask.Title" name="title" required type="text"></strong>
+            
+    
+            
+            <input (click)="backToTodos()" type="button" value="Cancel" style="float: right;">
+            <input  type="submit" value="Add" style="float: right;">
+            <br>
+                
+    
+    
+        </form>
+    </div>
+    
+    <br>
+        
+    </div>
+    <br><br>
+    
+    <app-posts-comp [userid]="userid"></app-posts-comp>
+    
+</div>
+
+

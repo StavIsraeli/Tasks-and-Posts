@@ -1,0 +1,16 @@
+<br>
+<div style=" border-style: solid; border-color: purple" >
+    
+   <div><strong>Title :</strong> {{task.Title}}</div>
+   <br>
+   <div>
+      <strong>Completed : </strong>{{task.Completed}}
+      <input *ngIf="task.Completed==false" type="button" value="Mark Completed" (click)="CompleteTask()">
+   </div>
+   
+     
+   
+   
+    
+</div>
+<br>

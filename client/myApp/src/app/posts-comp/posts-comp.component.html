@@ -1,0 +1,16 @@
+
+
+<div style=" border-style: solid; border-color: darkgray" >
+    <div>
+        <br>
+        Posts - User {{userid}} 
+        <br>
+        <input (click)="openAddPost()" type="button" value="Add"  style="float: right; background-color: lemonchiffon;">
+    </div>
+    
+
+    <app-post [post]="post" *ngFor="let post of userPosts" ></app-post>
+    
+    
+</div>
+<br>

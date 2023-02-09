@@ -1,0 +1,48 @@
+<div style=" border-style: solid; border-color: grey;border-radius: 25px" >
+    <br><br>
+
+
+
+    <div>
+        <app-todos-comp [userid]="userid"></app-todos-comp>
+        <br><br>
+    </div>
+
+
+   <div style=" border-style: solid; border-color: darkgray" >
+       <p>
+           <strong>New Post - User {{userid}}</strong>
+       </p>
+       
+       
+        <div style="height:100%;">
+            <form #f="ngForm" (ngSubmit)="customSubmit(f.valid)">
+
+                
+                
+                <strong>Title : <input #title="ngModel" [(ngModel)]="newPost.Title" name="title" required type="text"></strong><br><br>
+                <strong>Body : <input #body="ngModel" [(ngModel)]="newPost.Body" name="body" required type="text"></strong>
+                
+        
+                
+                <input (click)="backToPosts()" type="button" value="Cancel" style="float: right;">
+                <input  type="submit" value="Add" style="float: right;">
+                <br>
+                    
+        
+        
+            </form>
+            
+        </div>
+   
+        <br>
+       
+   </div>
+   <br><br>
+   
+   
+   
+   
+</div>
+
+

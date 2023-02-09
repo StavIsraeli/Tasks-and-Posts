@@ -1,0 +1,41 @@
+
+
+<div [style.backgroundColor]="isSelected ? 'PeachPuff' : 'white'"  [style.border-color]="isCompleteTasks ? 'green' : 'red' " style="  border-style: solid; border-width: 2px;">
+
+
+    <form #f="ngForm" (ngSubmit)="customSubmit(f.valid)">
+
+        <strong (click)="openDetails()">ID : {{user._id}}</strong><br><br>
+        
+        <strong>Name : <input name="Name" #name="ngModel" required  [(ngModel)]="user.Name"  type="text"></strong><br/><br>
+        <strong>Email : <input name="Email" #email="ngModel" required  [(ngModel)]="user.Email"  type="text"></strong><br/><br>
+
+        <div>
+            <input type="button" [value]="isOtherData ? 'Close' : 'Other Data'" (mouseover)="isOtherData=true" (click)="isOtherData=false">
+            
+            <div [style.display]="isOtherData ? 'block' : 'none' " style=" width: 50%; border-style: solid; background-color: lightgrey; border-color:grey; border-radius: 25px">
+                <br>
+                <strong>Street : <input name="Street" #street="ngModel"  [(ngModel)]="user.Street"  type="text"></strong><br/><br>
+                <strong>City : <input name="City" #city="ngModel"  [(ngModel)]="user.City"  type="text"></strong><br/><br>
+                <strong>ZipCode : <input name="ZipCode" #zipcode="ngModel"  [(ngModel)]="user.Zipcode"  type="text"></strong><br/><br>
+                
+        
+        
+            </div>
+            <input type="submit" value="Update" style="float: right;">
+            <input (click)="deleteUser()" type="button" value="Delete" style="float: right;">
+            <br>
+            
+        </div>
+
+    </form>
+    
+    
+   
+        
+    
+        
+    
+  
+</div>  
+<br>

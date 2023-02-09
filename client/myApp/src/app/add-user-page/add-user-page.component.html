@@ -1,0 +1,26 @@
+<div style=" border-style: solid; border-color: darkgray" >
+    <p>
+        <strong> Add New User -</strong>
+    </p>
+    
+    
+     <div style="height:100%;">
+         <form #f="ngForm" (ngSubmit)="customSubmit(f.valid)">
+
+             
+             
+             <p> Name : <input #name="ngModel" [(ngModel)]="newUser.Name" name="name" required type="text"></p>
+             <p> Email : <input #email="ngModel" [(ngModel)]="newUser.Email" name="email" required type="text"></p>
+             
+     
+             
+             <input (click)="backToMainPage()" type="button" value="Cancel" style="float: right;">
+             <input  type="submit" value="Add" style="float: right;">
+             <br>
+             <br>
+                 
+     
+     
+         </form>
+         
+     </div>

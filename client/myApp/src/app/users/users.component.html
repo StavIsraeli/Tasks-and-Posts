@@ -1,0 +1,54 @@
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+     
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+</style>
+
+<h2>USERS : </h2><br>
+
+
+<div class="row" >
+    <div class="column" style=" border-style: solid; border-color: grey;border-radius: 25px"  >
+
+
+        
+        <span>Search <input #s type="text" (keyup)="Search(s.value)"></span>
+
+
+
+        <input (click)="openAddUser()" type="button" value="Add"  style="float: right; background-color: lemonchiffon;">
+        <br><br>
+     
+    <app-user [isSelected]="user._id==selectedUser ? true : false" (notify)="selectedUser=$event" [user]="user" *ngFor="let user of filteresUsers" >
+
+    </app-user>
+    <br><br>
+       
+
+    </div>
+
+    <div class="column">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
+
+
+
+
